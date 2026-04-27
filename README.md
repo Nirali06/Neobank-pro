@@ -496,7 +496,7 @@ This is fixed by `hasRunRef` in `BotAutomation.jsx`. If you still see it, ensure
 ### CORS errors in browser console
 Ensure the backend is running on port 8000 and the frontend on port 3000. The backend's CORS config allows only `http://localhost:3000`.
 
-### Database reset
+### Database rese
 Delete `neobank.db` from the `backend/` folder and restart the server. It will be recreated with the demo user.
 
 ```bash
@@ -504,7 +504,8 @@ rm neobank-pro/backend/neobank.db
 uvicorn main:app --reload
 ```
 
-###Author
+### author
+
 niralisoni
 
 
