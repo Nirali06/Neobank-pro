@@ -1,0 +1,63 @@
+# ─────────────────────────────────────────────────────────────────
+# NeoBank Pro — Backend Requirements
+# Python 3.9+ required
+# Install: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────
+
+# ── CORE FRAMEWORK ────────────────────────────────────────────────
+fastapi==0.111.0          # Web framework — routing, dependency injection, validation
+uvicorn==0.29.0           # ASGI server — runs the FastAPI app
+pydantic==2.7.1           # Data validation and serialization for request/response models
+
+# ── ASYNC & STREAMING ─────────────────────────────────────────────
+httpx==0.27.0             # Async HTTP client (used internally by FastAPI)
+anyio==4.3.0              # Async compatibility layer for uvicorn
+
+# ── SECURITY & AUTH ───────────────────────────────────────────────
+python-jose==3.3.0        # JWT token creation and verification
+passlib==1.7.4            # Password hashing utilities (bcrypt wrapper)
+bcrypt==4.1.3             # Bcrypt algorithm for password hashing
+
+# ── GOOGLE SIGN-IN (optional) ─────────────────────────────────────
+# Required only if you enable Google OAuth sign-in.
+# Set GOOGLE_CLIENT_ID in auth.py before using.
+google-auth==2.29.0       # Verify Google ID tokens from GSI frontend SDK
+
+# ── DATABASE ──────────────────────────────────────────────────────
+# sqlite3 is built into Python — no separate install needed.
+# The database file (neobank.db) is auto-created on first run.
+
+# ── RAG ENGINE (built-in, no extra packages needed) ───────────────
+# rag_engine.py uses only Python standard library:
+#   re, math — for TF-IDF tokenization and scoring
+#   knowledge_base.py — local document store (no vector DB needed)
+
+# ── LANGCHAIN AGENT (built-in, no extra packages needed) ──────────
+# langchain_agent.py implements the ReAct agent pattern from scratch.
+# Does NOT require the langchain pip package — pure Python.
+# If you want to upgrade to the real LangChain library:
+# langchain==0.2.1
+# langchain-anthropic==0.1.11
+# langchain-community==0.2.1
+
+# ── LLM / ANTHROPIC API ───────────────────────────────────────────
+# The chatbot calls Claude via urllib (stdlib) — no SDK needed.
+# If you prefer the official SDK:
+# anthropic==0.25.0
+
+# ── PLAYWRIGHT (optional, for server-side browser automation) ─────
+# playwright_bot.py runs as a PARSER only (no browser needed).
+# The UI automation is handled by BotAutomation.jsx on the frontend.
+# Only install if you want server-side Playwright automation:
+# playwright==1.44.0
+
+# ── CORS ──────────────────────────────────────────────────────────
+# python-multipart needed by FastAPI for form data support
+python-multipart==0.0.9
+
+# ── DEVELOPMENT TOOLS (optional) ──────────────────────────────────
+# Uncomment for development use:
+# pytest==8.2.0             # Unit testing
+# pytest-asyncio==0.23.6    # Async test support
+# black==24.4.2             # Code formatter
+# ruff==0.4.4               # Fast linter
