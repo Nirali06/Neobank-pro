@@ -21,6 +21,7 @@ A full-stack digital banking application with an AI-powered chatbot, RAG knowled
 - [API Reference](#api-reference)
 - [Demo Account](#demo-account)
 - [Troubleshooting](#troubleshooting)
+- [Author](#author)
 
 ---
 
@@ -502,3 +503,9 @@ Delete `neobank.db` from the `backend/` folder and restart the server. It will b
 rm neobank-pro/backend/neobank.db
 uvicorn main:app --reload
 ```
+
+###Author
+
+
+
+
