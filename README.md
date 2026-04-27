@@ -21,7 +21,7 @@ A full-stack digital banking application with an AI-powered chatbot, RAG knowled
 - [API Reference](#api-reference)
 - [Demo Account](#demo-account)
 - [Troubleshooting](#troubleshooting)
-- [Author](#author)
+- [Author](#Author)
 
 ---
 
@@ -504,9 +504,11 @@ rm neobank-pro/backend/neobank.db
 uvicorn main:app --reload
 ```
 
-### author
+### Author
 
-niralisoni
+## Author
+- **Nirali soni** - https://github.com/Nirali06
+- Feel free to contact me at: niralisoni0606@gmail.com
 
 
 
